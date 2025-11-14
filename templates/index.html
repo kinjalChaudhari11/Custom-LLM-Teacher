@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaperQuest - Learn Anything Through Adventure</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div id="welcome-screen" class="screen active">
+            <div class="hero">
+                <h1> PaperQuest</h1>
+                <p class="tagline">Your content, your way</p>
+            </div>
+            
+            <div class="upload-section">
+                <h2>What do you want to learn?</h2>
+                <div class="upload-options">
+                    <div class="upload-box">
+                        <label for="pdf-upload" class="upload-label">
+                            <span class="upload-icon"></span>
+                            <span>Drop a PDF</span>
+                            <input type="file" id="pdf-upload" accept=".pdf" hidden>
+                        </label>
+                    </div>
+                    <div class="divider">or</div>
+                    <div class="text-paste">
+                        <textarea id="text-input" placeholder="Paste anything - articles, notes, textbook pages..."></textarea>
+                    </div>
+                </div>
+                
+                <div class="interests-section">
+                    <h2>What are you into?</h2>
+                    <input type="text" id="interests-input" placeholder="sports, cooking, gaming, music...">
+                    <p class="hint">We'll make your learning adventure about these!</p>
+                </div>
+                
+                <button id="start-btn" class="primary-btn" disabled>Let's Go →</button>
+                <div id="loading" class="loading hidden">
+                    <div class="spinner"></div>
+                    <p>Creating your adventure...</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="game-screen" class="screen">
+            <div class="game-header">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress"></div>
+                </div>
+                <div class="game-info">
+                    <span id="chapter-num">Chapter 1</span>
+                    <span class="separator">•</span>
+                    <span id="concept-tag">Loading...</span>
+                </div>
+            </div>
+
+            <div class="game-content">
+                <h2 id="chapter-title" class="chapter-title"></h2>
+                <div id="narrative" class="narrative"></div>
+                
+                <div id="choices-container" class="choices-container"></div>
+            </div>
+
+            <button id="new-game-btn" class="secondary-btn">← Start Over</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
