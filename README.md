@@ -14,9 +14,8 @@ PaperQuest takes in content (PDFs or text) and your personal interests, then gen
 -  **PDF Upload** - Extract text from research papers automatically
 -  **Text Paste** - Or just paste content directly
 -  **Interest Matching** - Personalize learning to your hobbies
--  **Choose-Your-Own-Adventure** - Multiple story paths based on your choices
+-  **Choose Your Own Adventure** - Multiple story paths based on your choices
 -  **Concept Tracking** - See what you're learning in each chapter
--  **Beautiful UI** - Modern, game like interface with animations
 -  **Progress Tracking** - Visual progress bar as you advance
 
 ##  Acknowledgments
